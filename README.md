@@ -2,7 +2,7 @@
 
 A deep learning pipeline for analyzing driver head pose and eye gaze in dashcam footage. Uses **L2CS-Net** (ResNet50 backbone, PyTorch/CUDA) to classify On-Road vs Off-Road glances, detect driving mode transitions, and export structured reports.
 
-<video src="demo.mp4" controls width="720"></video>
+https://github.com/user-attachments/assets/081e7166-2cb5-40e9-ad03-89d3c1e9f133
 
 ---
 
