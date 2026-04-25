@@ -61,6 +61,30 @@ Get the model from here: [https://github.com/ahmednull/l2cs-net](https://github.
 
 ---
 
+## Before Running
+
+The following are hardcoded to our system and **must be updated** before running:
+
+**1. OpenCV DLL path** — top of `main.py`, `batch.py`, and `quick_calibrate.py`:
+```python
+os.add_dll_directory(r'C:/opencv_build/bin/Release')
+```
+Change this to your OpenCV binary path. If you installed OpenCV via `pip install opencv-python`, remove this line entirely.
+
+**2. CUDA DLL path** — same three files:
+```python
+os.add_dll_directory(r'C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin')
+```
+Update the CUDA version and path to match your installation. These `os.add_dll_directory` calls are **Windows-only** — remove them on Linux/macOS.
+
+**3. CUDA device** — `main.py` line 295:
+```python
+gaze_tracker = DeepGazeTracker(device='cuda')
+```
+Change to `device='cpu'` if you do not have an NVIDIA GPU (significantly slower).
+
+---
+
 ## Project Structure
 
 | File | Description |
