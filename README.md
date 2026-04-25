@@ -2,6 +2,8 @@
 
 A deep learning pipeline for analyzing driver head pose and eye gaze in dashcam footage. Uses **L2CS-Net** (ResNet50 backbone, PyTorch/CUDA) to classify On-Road vs Off-Road glances, detect driving mode transitions, and export structured reports.
 
+ <video src="demo.mp4" controls width="720"></video>
+
 ---
 
 ## Features
@@ -45,8 +47,10 @@ Install dependencies:
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 pip install opencv-python numpy l2cs scikit-learn matplotlib
 ```
+>FSRCNN model weights are downloaded automatically on first use (if upscaling is enabled) from github.com/Saafke/FSRCNN_Tensorflow. The .pb file is saved to the working directory and reused on subsequent runs. No manual download needed.
 
 > **Note:** The `l2cs` package requires the `L2CSNet_gaze360.pkl` model weights file to be present in the working directory (or specify the path in `face_analysis_dl.py`).
+Get the model from here: [https://github.com/ahmednull/l2cs-net](https://github.com/ahmednull/l2cs-net#demo)
 
 ---
 
